@@ -1,0 +1,150 @@
+@use "../base/color" as *;
+@use "../base/font";
+@use "../utilities/background" as bg;
+@use "../utilities/breakpoint";
+@use "../components/carousel-modify";
+@use "../components/service-card";
+@use "../components/feature-display";
+@use "../components/news-card";
+@use "../components/works-swiper-modify";
+@use "../components/more-link-stretch";
+
+main {
+  // @extend %section_bg;
+  @include bg.section_bg(0);
+}
+
+.service {
+  padding: 0 40px;
+
+  .row {
+    @include breakpoint.desktop {
+      position: relative;
+      z-index: 999;
+      transform: translateY(-30px);
+    }
+  }
+
+  .row > div {
+    margin-top: 10px;
+    @include breakpoint.desktop {
+      margin-top: 0;
+    }
+  }
+}
+
+.introduction_blocks {
+  padding: 20px 40px;
+
+  .row {
+    > div + div {
+      margin-top: 40px;
+    }
+
+    @include breakpoint.tablet {
+      > div:not(:last-child) {
+        margin-top: 0;
+      }
+    }
+
+    @include breakpoint.desktop {
+      > div:last-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .block_title {
+    @extend %primary-title;
+    margin-bottom: 20px;
+
+    @include breakpoint.bgScreen {
+      width: auto;
+    }
+  }
+}
+
+.welcome {
+  position: relative;
+  //for stretch <a> link
+
+  p {
+    margin-top: 20px;
+  }
+
+  .welcome_body {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint.tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      div {
+        flex: 1 0 60%;
+      }
+
+      p {
+        flex: 1 0 40%;
+        margin-top: 0;
+        padding: 25px;
+      }
+    }
+
+    @include breakpoint.desktop {
+      flex-direction: column;
+
+      div {
+        flex: 1 0 auto;
+      }
+
+      p {
+        flex: 1 0 auto;
+        margin-top: 20px;
+        padding: 0;
+      }
+    }
+  }
+
+  a {
+    @extend %more-link;
+  }
+}
+
+.news_cards_block {
+  display: flex;
+  flex-direction: column;
+  .news_card {
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  @include breakpoint.tablet {
+    flex-direction: row;
+
+    .news_card {
+      &:not(:first-child) {
+        margin-top: 0px;
+      }
+    }
+  }
+
+  @include breakpoint.desktop {
+    flex-direction: column;
+
+    .news_card {
+      &:not(:first-child) {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.work_gallery {
+  padding: 20px 40px 40px;
+  .gallery_title {
+    @extend %primary-title;
+  }
+}

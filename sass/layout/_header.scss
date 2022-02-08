@@ -1,0 +1,86 @@
+@use "../base/color" as *;
+@use "../utilities/background" as bg;
+@use "../utilities/breakpoint";
+@use "../components/navbar-modify";
+@use "../components/search-modify";
+
+header {
+  margin-top: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include bg.section_bg;
+  @include breakpoint.tablet {
+    justify-content: space-between;
+  }
+}
+
+.logo a {
+  display: inline-block;
+}
+
+.connect {
+  margin: 15px 0 0 0;
+
+  @include breakpoint.tablet {
+    margin: 0 0 0 0;
+  }
+}
+
+.social_media {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  @include breakpoint.tablet {
+    justify-content: flex-end;
+  }
+}
+
+@mixin sprite($x, $y) {
+  display: inline-block;
+  background-image: url("../images/social.png");
+  background-repeat: no-repeat;
+  background-position: $x $y;
+  width: 27px;
+  height: 27px;
+
+  &:hover {
+    background-position: $x bottom;
+  }
+}
+
+.social_media li {
+  vertical-align: bottom;
+
+  & + li {
+    margin-left: 10px;
+  }
+
+  &:first-child {
+    @include sprite(0, 0);
+  }
+
+  &:nth-child(2) {
+    @include sprite(-37px, 0);
+  }
+
+  &:nth-child(3) {
+    @include sprite(-74px, 0);
+  }
+
+  &:nth-child(4) {
+    @include sprite(-111px, 0);
+  }
+
+  &:nth-child(5) {
+    @include sprite(-150px, 0);
+  }
+}
+
+.navigation {
+  margin-top: 20px;
+  background: linear-gradient(180deg, transparent 60%, #fff 60%);
+}

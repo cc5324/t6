@@ -1,0 +1,26 @@
+// @use "base/reset";
+// @use "base/color" as *;
+// @use "base/font";
+// @use "utilities/breakpoint";
+// @use "utilities/background" as bg;
+// @use "utilities/tools";
+
+@use "layout/header";
+@use "layout/main";
+@use "layout/footer";
+
+// @use "../node_modules/bootstrap/scss/nav";
+* {
+  // outline: 1px solid rosybrown;
+}
+
+body {
+  min-width: 375px;
+  background: linear-gradient(
+      180deg,
+      black 0 75px,
+      transparent 75px 90%,
+      black 90% 100%
+    ),
+    url(../images/bg.jpg);
+}

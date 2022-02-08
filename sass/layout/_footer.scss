@@ -1,0 +1,171 @@
+@use "../base/color" as *;
+@use "../base/font";
+@use "../utilities/background" as bg;
+@use "../utilities/breakpoint";
+@use "../utilities/tools";
+
+@use "../components/buttons" as btn;
+@use "../components/form";
+@use "../components/dialogue";
+
+footer {
+  section {
+    @include bg.section_bg;
+    padding: 20px 40px;
+    margin-top: 40px;
+  }
+
+  .row {
+    > div + div {
+      margin-top: 20px;
+    }
+
+    @include breakpoint.tablet {
+      > div:not(:last-child, div:nth-last-child(2)) {
+        margin-top: 0;
+      }
+    }
+
+    @include breakpoint.desktop {
+      > div:last-child,
+      div:nth-last-child(2) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.footer_block_title {
+  margin-bottom: 20px;
+  @extend %secondary-title;
+}
+
+.testimonials {
+  .dialogue {
+    margin-bottom: 20px;
+
+    p {
+      // @include tools.line-clamp(5);
+    }
+  }
+  .custom_info {
+    display: flex;
+
+    div {
+      margin-left: 10px;
+    }
+
+    span {
+      display: block;
+      text-transform: capitalize;
+    }
+
+    a {
+      display: block;
+      color: $highlight-green;
+      font-style: italic;
+    }
+  }
+}
+
+.contact {
+  //元素樣式
+  input,
+  textarea {
+    width: 100%;
+    @include form.input-base;
+  }
+
+  textarea {
+    height: max-content;
+  }
+
+  button {
+    @include btn.button-base;
+  }
+
+  .reset_button {
+    background: $dark-black;
+    color: white;
+  }
+
+  .submit_button {
+    margin-left: 5px;
+    background: $highlight-green;
+    color: white;
+  }
+
+  //layout
+  form > * {
+    margin-bottom: 5px;
+  }
+}
+
+.flickr_album {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+
+  img {
+    width: 100%;
+  }
+
+  &:hover {
+    img {
+      // opacity: 0.7;
+      filter: grayscale(100%);
+    }
+
+    img:hover {
+      // opacity: 1;
+      filter: grayscale(0);
+    }
+  }
+}
+
+.footer_bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding: 15px 5px;
+  background: $dark-black;
+  color: $gray-400;
+
+  text-transform: uppercase;
+
+  @include breakpoint.desktop {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .copyright {
+    align-self: center;
+  }
+
+  .policy {
+    color: $highlight-green;
+
+    text-transform: capitalize;
+  }
+
+  .footer_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .footer_nav_item {
+      padding: 0 10px;
+      & + .footer_nav_item {
+        border-left: 1px solid $gray-400;
+      }
+      &.active {
+        color: $highlight-green;
+      }
+
+      &:hover {
+        color: $highlight-green;
+      }
+    }
+  }
+}

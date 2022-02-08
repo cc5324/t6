@@ -1,0 +1,19 @@
+@use "../base/color" as *;
+
+@mixin input-base {
+  padding: 5px;
+
+  background: $gray-100;
+  border: 1px solid $gray-300;
+  border-radius: 2px;
+
+  &:focus {
+    border: 3px solid $highlight-green;
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    border: 3px solid $highlight-green;
+    box-shadow: none;
+  }
+}
