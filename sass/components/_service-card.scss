@@ -1,8 +1,7 @@
 @use "../base/color" as *;
-@use "../utilities/breakpoint";
-@use "../utilities/tools";
 
-@use "buttons" as btn;
+@use "../utilities/breakpoint";
+@use "../utilities/button-style" as btn;
 
 .service_card {
   display: flex;
@@ -31,9 +30,5 @@
   a {
     @include btn.button-more;
     color: black;
-  }
-
-  p {
-    @include tools.line-clamp(5);
   }
 }

@@ -1,45 +1,7 @@
 // sass 變數
 $highlight-green: #7db311;
-$primary-green: #7db311;
-$dark-black: #222222;
 $gray-100: #f3f3f3;
 $gray-200: #e6e6e6;
 $gray-300: #cccccc;
 $gray-400: #9b9b9b;
 $gray-500: #646464;
-
-// css 變數
-// :root {
-//   --hightlight-green: #7db311;
-//   --dark-black: #222222;
-//   --gray-100: #f3f3f3;
-//   --gray-200: #e6e6e6;
-//   --gray-300: #cccccc;
-//   --gray-400: #9b9b9b;
-//   --gray-500: #646464;
-// }
-
-// $new-gray: var(--gray-500);
-
-// textarea {
-//   background: $new-gray;
-// }
-
-// sass 變數 ＋ CSS 變數
-// $colors: (
-//   hightlight-green: #7db311,
-//   dark-balck: #222222,
-//   gray-100: #f3f3f3,
-//   gray-200: #e6e6e6,
-//   gray-300: #cccccc,
-//   gray-400: #9b9b9b,
-//   gray-500: #646464,
-// );
-
-// loop over each name, color
-// :root {
-//   // each item in color map
-//   @each $name, $color in $colors {
-//     --#{$name}: #{$color};
-//   }
-// }

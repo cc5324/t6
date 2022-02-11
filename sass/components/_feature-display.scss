@@ -1,5 +1,5 @@
 @use "../base/color" as *;
-@use "icon";
+@use "../utilities/icon-unify" as icon;
 
 .feature {
   display: flex;

@@ -1,7 +1,8 @@
-@use "../base/color" as *;
-@use "../utilities/breakpoint";
-@use "../utilities/tools";
-@use "form";
+@use "../../base/color" as *;
+
+@use "../../utilities/breakpoint";
+@use "../../utilities/position";
+@use "../../utilities/input-style" as input;
 
 // base on bootstrap search component
 
@@ -10,12 +11,12 @@
   position: relative;
 }
 .search {
-  @include tools.position-absolute(12px, 8px, auto, auto);
+  @include position.position-absolute(12px, 8px, auto, auto);
   margin: 0 0 0 20px;
   flex: 1 0 20%;
 
   input {
-    @include form.input-base;
+    @include input.input-base;
 
     padding-right: 30px;
     background: $gray-100 url(../images/search.png) no-repeat;

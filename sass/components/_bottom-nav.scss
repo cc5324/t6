@@ -1,0 +1,51 @@
+@use "../base/color" as *;
+
+@use "../utilities/breakpoint";
+@use "../utilities/background" as bg;
+
+.footer_bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding: 15px 5px;
+  background: black;
+  color: $gray-400;
+
+  text-transform: uppercase;
+
+  @include breakpoint.desktop {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .copyright {
+    align-self: center;
+  }
+
+  .policy {
+    color: $highlight-green;
+
+    text-transform: capitalize;
+  }
+
+  .footer_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .footer_nav_item {
+      padding: 0 10px;
+      & + .footer_nav_item {
+        border-left: 1px solid $gray-400;
+      }
+      &.active {
+        color: $highlight-green;
+      }
+
+      &:hover {
+        color: $highlight-green;
+      }
+    }
+  }
+}

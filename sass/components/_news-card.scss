@@ -1,19 +1,20 @@
 @use "../base/color" as *;
 @use "../base/font";
-@use "../components/more-link-stretch";
-@use "../components/date";
+
+@use "./more-link";
 
 .news_card {
   display: flex;
-  position: relative;
+  // position: relative;
   //for stretch <a> link
 
   .news_card_body {
     margin-left: 15px;
   }
-
   .news_date {
-    @include date.news_date;
+    padding: 5px;
+    color: white;
+    background: $highlight-green;
   }
 
   p {
@@ -21,7 +22,7 @@
     font-size: 14px;
   }
 
-  a {
-    @extend %more-link;
-  }
+  // a {
+  //   @extend %more-link;
+  // }
 }

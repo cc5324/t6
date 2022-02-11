@@ -1,17 +1,16 @@
-@use "../base/color" as *;
-@use "../base/font";
 @use "../utilities/background" as bg;
 @use "../utilities/breakpoint";
-@use "../components/carousel-modify";
+
+@use "../vendors/bootstrap/carousel";
+@use "../vendors/swiper/navigation";
+
 @use "../components/service-card";
 @use "../components/feature-display";
 @use "../components/news-card";
-@use "../components/works-swiper-modify";
-@use "../components/more-link-stretch";
+@use "../components/more-link";
 
 main {
-  // @extend %section_bg;
-  @include bg.section_bg(0);
+  @include bg.section_bg;
 }
 
 .service {
@@ -55,7 +54,7 @@ main {
   }
 
   .block_title {
-    @extend %primary-title;
+    @extend %main-content-title;
     margin-bottom: 20px;
 
     @include breakpoint.bgScreen {
@@ -65,7 +64,7 @@ main {
 }
 
 .welcome {
-  position: relative;
+  // position: relative;
   //for stretch <a> link
 
   p {
@@ -107,9 +106,9 @@ main {
     }
   }
 
-  a {
-    @extend %more-link;
-  }
+  // a {
+  //   @extend %more-link;
+  // }
 }
 
 .news_cards_block {
@@ -145,6 +144,6 @@ main {
 .work_gallery {
   padding: 20px 40px 40px;
   .gallery_title {
-    @extend %primary-title;
+    @extend %main-content-title;
   }
 }

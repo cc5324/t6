@@ -1,19 +1,26 @@
 @use "../base/color" as *;
+@use "../utilities/input-style" as input;
+@use "../utilities/button-style" as btn;
 
-@mixin input-base {
-  padding: 5px;
-
-  background: $gray-100;
-  border: 1px solid $gray-300;
-  border-radius: 2px;
-
-  &:focus {
-    border: 3px solid $highlight-green;
-    box-shadow: none;
+.contact {
+  input,
+  textarea {
+    width: 100%;
+    @include input.input-base;
   }
 
-  &:focus-visible {
-    border: 3px solid $highlight-green;
-    box-shadow: none;
+  button {
+    @include btn.button-base;
+  }
+
+  .reset_button {
+    background: black;
+    color: white;
+  }
+
+  .submit_button {
+    margin-left: 5px;
+    background: $highlight-green;
+    color: white;
   }
 }
