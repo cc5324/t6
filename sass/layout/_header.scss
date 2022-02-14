@@ -1,3 +1,5 @@
+@use "../base/color" as *;
+
 @use "../utilities/background" as bg;
 @use "../utilities/breakpoint";
 
@@ -7,7 +9,7 @@
 
 header {
   margin-top: 10px;
-  padding: 15px 15px;
+  padding: 15px 20px;
 
   display: flex;
   flex-wrap: wrap;
@@ -29,12 +31,17 @@ header {
   @include breakpoint.tablet {
     margin: 0 0 0 0;
   }
+
+  .tel_link {
+    &:hover {
+      color: $highlight-green;
+    }
+  }
 }
 
 .social_media {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
 
   @include breakpoint.tablet {
     justify-content: flex-end;

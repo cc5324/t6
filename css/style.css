@@ -67,6 +67,11 @@
   transition-property: transform, height;
 }
 
+.swiper-backface-hidden .swiper-slide {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
 /* 3D Effects */
 .swiper-3d, .swiper-3d.swiper-css-mode .swiper-wrapper {
   perspective: 1200px;
@@ -202,6 +207,10 @@ textarea {
   resize: none;
 }
 
+button {
+  border: none;
+}
+
 .navigation {
   display: flex;
 }
@@ -304,7 +313,10 @@ textarea {
 .social_media li + li {
   margin-left: 10px;
 }
-.social_media li:first-child {
+.social_media li a {
+  display: block;
+}
+.social_media li:first-child a {
   display: inline-block;
   background-image: url("../images/social.png");
   background-repeat: no-repeat;
@@ -312,10 +324,10 @@ textarea {
   width: 27px;
   height: 27px;
 }
-.social_media li:first-child:hover {
+.social_media li:first-child a:hover {
   background-position: 0 bottom;
 }
-.social_media li:nth-child(2) {
+.social_media li:nth-child(2) a {
   display: inline-block;
   background-image: url("../images/social.png");
   background-repeat: no-repeat;
@@ -323,10 +335,10 @@ textarea {
   width: 27px;
   height: 27px;
 }
-.social_media li:nth-child(2):hover {
+.social_media li:nth-child(2) a:hover {
   background-position: -37px bottom;
 }
-.social_media li:nth-child(3) {
+.social_media li:nth-child(3) a {
   display: inline-block;
   background-image: url("../images/social.png");
   background-repeat: no-repeat;
@@ -334,10 +346,10 @@ textarea {
   width: 27px;
   height: 27px;
 }
-.social_media li:nth-child(3):hover {
+.social_media li:nth-child(3) a:hover {
   background-position: -74px bottom;
 }
-.social_media li:nth-child(4) {
+.social_media li:nth-child(4) a {
   display: inline-block;
   background-image: url("../images/social.png");
   background-repeat: no-repeat;
@@ -345,10 +357,10 @@ textarea {
   width: 27px;
   height: 27px;
 }
-.social_media li:nth-child(4):hover {
+.social_media li:nth-child(4) a:hover {
   background-position: -111px bottom;
 }
-.social_media li:nth-child(5) {
+.social_media li:nth-child(5) a {
   display: inline-block;
   background-image: url("../images/social.png");
   background-repeat: no-repeat;
@@ -356,18 +368,13 @@ textarea {
   width: 27px;
   height: 27px;
 }
-.social_media li:nth-child(5):hover {
+.social_media li:nth-child(5) a:hover {
   background-position: -150px bottom;
-}
-.social_media a {
-  display: block;
-  width: 27px;
-  height: 27px;
 }
 
 header {
   margin-top: 10px;
-  padding: 15px 15px;
+  padding: 15px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -393,11 +400,13 @@ header {
     margin: 0 0 0 0;
   }
 }
+.connect .tel_link:hover {
+  color: #7db311;
+}
 
 .social_media {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
 }
 @media (min-width: 768px) {
   .social_media {
@@ -468,7 +477,7 @@ header {
   align-self: center;
   height: 50px;
   width: 50px;
-  border-radius: 25px;
+  border-radius: 999px;
   background: #cccccc;
   color: white;
   text-align: center;
@@ -543,7 +552,7 @@ header {
   align-self: center;
   height: 40px;
   width: 40px;
-  border-radius: 20px;
+  border-radius: 999px;
   background: #cccccc;
   color: white;
   text-align: center;

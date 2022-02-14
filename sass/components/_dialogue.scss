@@ -8,11 +8,9 @@
 
   p {
     background: $gray-100;
-    // border: 1px solid $gray-300;
 
     clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 10% 90%, 0% 100%);
     padding: 15px 20px 40px;
-    // border-radius: 2px;
 
     @include breakpoint.tablet {
       clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 15% 90%, 0% 100%);

@@ -64,9 +64,6 @@ main {
 }
 
 .welcome {
-  // position: relative;
-  //for stretch <a> link
-
   p {
     margin-top: 20px;
   }
@@ -105,10 +102,6 @@ main {
       }
     }
   }
-
-  // a {
-  //   @extend %more-link;
-  // }
 }
 
 .news_cards_block {
