@@ -9,18 +9,20 @@
 
 .swiper-slide {
   position: relative;
+
   .work_link {
     display: none;
   }
+
   &:hover {
     img {
-      opacity: 0.7;
+      opacity: 0.6;
     }
+
     .work_link {
       display: block;
-      @include icon.icon-circle-bg(50px);
-      @include position.position-absolute(50%, 50%);
-      transform: translateX(50%) translateY(-50%);
+      @include icon.icon-circle-bg(45px);
+      @include position.position-absolute-center;
     }
   }
 

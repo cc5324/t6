@@ -8,12 +8,19 @@
 @use "../components/flicker";
 @use "../components/bottom-nav";
 
+$unify-horizontall-padding-s: 20px;
+$unify-horizontall-padding-ml: 40px;
+
 footer {
   margin-top: 40px;
 
   section {
     @include bg.section_bg;
-    padding: 20px 40px;
+    padding: 20px $unify-horizontall-padding-s;
+
+    @include breakpoint.desktop {
+      padding: 20px $unify-horizontall-padding-ml;
+    }
   }
 
   .row {
@@ -39,10 +46,4 @@ footer {
 .footer_block_title {
   margin-bottom: 20px;
   @extend %footer-content-title;
-}
-
-.contact {
-  form > * {
-    margin-bottom: 5px;
-  }
 }

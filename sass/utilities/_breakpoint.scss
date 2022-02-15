@@ -1,13 +1,5 @@
-$mobile-horizontal: 576px;
 $tablet: 768px;
 $desktop: 992px;
-$bgScreen: 1400px;
-
-@mixin mobile-horizontal {
-  @media (min-width: $mobile-horizontal) {
-    @content;
-  }
-}
 
 @mixin tablet {
   @media (min-width: $tablet) {
@@ -17,12 +9,6 @@ $bgScreen: 1400px;
 
 @mixin desktop {
   @media (min-width: $desktop) {
-    @content;
-  }
-}
-
-@mixin bgScreen {
-  @media (min-width: $bgScreen) {
     @content;
   }
 }

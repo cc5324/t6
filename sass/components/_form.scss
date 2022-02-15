@@ -5,6 +5,7 @@
 .contact {
   input,
   textarea {
+    margin-bottom: 5px;
     width: 100%;
     @include input.input-base;
   }

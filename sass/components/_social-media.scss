@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @mixin sprite($x, $y) {
   display: inline-block;
   background-image: url("../images/social.png");
@@ -11,10 +13,15 @@
   }
 }
 
+$icon-position: (
+  "facebook": (
+    0,
+    0,
+  ),
+);
+
 .social_media {
   li {
-    vertical-align: bottom;
-
     & + li {
       margin-left: 10px;
     }
@@ -24,6 +31,7 @@
     }
 
     &:first-child a {
+      // map.get($icon-position, "facebook")
       @include sprite(0, 0);
     }
 

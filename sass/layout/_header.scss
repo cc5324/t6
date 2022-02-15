@@ -3,9 +3,8 @@
 @use "../utilities/background" as bg;
 @use "../utilities/breakpoint";
 
-@use "../vendors/bootstrap/navbar";
-@use "../vendors/bootstrap/search";
 @use "../components/social-media";
+// @import "../base/color";
 
 header {
   margin-top: 10px;
