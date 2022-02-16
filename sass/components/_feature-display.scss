@@ -12,11 +12,16 @@
 
     @include icon.icon-circle-bg(40px);
 
+    i {
+      transform: translateX(0);
+      transition: 0.2s ease-in;
+    }
+
     &:hover {
       background: $highlight-green;
 
       i {
-        transform: tranlateY(5px);
+        transform: translateX(3px);
         transition: 0.2s ease-in;
       }
     }

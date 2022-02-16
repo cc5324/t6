@@ -576,11 +576,15 @@ header {
   background: #7db311;
   color: white;
 }
+.feature a i {
+  transform: translateX(0);
+  transition: 0.2s ease-in;
+}
 .feature a:hover {
   background: #7db311;
 }
 .feature a:hover i {
-  transform: tranlateY(5px);
+  transform: translateX(3px);
   transition: 0.2s ease-in;
 }
 .feature p {
