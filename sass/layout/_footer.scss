@@ -1,4 +1,5 @@
 @use "../base/font";
+@use "../base/spacing";
 
 @use "../utilities/background" as bg;
 @use "../utilities/breakpoint";
@@ -8,18 +9,19 @@
 @use "../components/flicker";
 @use "../components/bottom-nav";
 
-$unify-horizontall-padding-s: 20px;
-$unify-horizontall-padding-ml: 40px;
-
 footer {
-  margin-top: 40px;
+  margin-top: spacing.$sections-margin-s;
+
+  @include breakpoint.tablet {
+    margin-top: spacing.$sections-margin-ml;
+  }
 
   section {
     @include bg.section_bg;
-    padding: 20px $unify-horizontall-padding-s;
+    padding: 20px spacing.$horizontal-padding-s;
 
     @include breakpoint.desktop {
-      padding: 20px $unify-horizontall-padding-ml;
+      padding: 20px spacing.$horizontal-padding-ml;
     }
   }
 
@@ -29,21 +31,20 @@ footer {
     }
 
     @include breakpoint.tablet {
-      > div:not(:last-child, div:nth-last-child(2)) {
+      > div:nth-child(2) {
         margin-top: 0;
       }
     }
 
     @include breakpoint.desktop {
-      > div:last-child,
-      div:nth-last-child(2) {
+      > div + div {
         margin-top: 0;
       }
     }
   }
 }
 
-.footer_block_title {
+.footer_content_title {
   margin-bottom: 20px;
-  @extend %footer-content-title;
+  @extend %secondary-title;
 }

@@ -13,15 +13,10 @@
   }
 }
 
-$icon-position: (
-  "facebook": (
-    0,
-    0,
-  ),
-);
-
 .social_media {
   li {
+    font-size: 0;
+
     & + li {
       margin-left: 10px;
     }
@@ -31,7 +26,6 @@ $icon-position: (
     }
 
     &:first-child a {
-      // map.get($icon-position, "facebook")
       @include sprite(0, 0);
     }
 

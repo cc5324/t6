@@ -13,6 +13,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 
   @include bg.section_bg;
   @include breakpoint.tablet {
@@ -25,10 +26,15 @@ header {
 }
 
 .connect {
-  margin: 15px 0 0 0;
+  margin-top: 15px;
 
   @include breakpoint.tablet {
-    margin: 0 0 0 0;
+    margin: 0;
+  }
+
+  .telephone {
+    display: block;
+    margin-top: 10px;
   }
 
   .tel_link {
@@ -45,9 +51,4 @@ header {
   @include breakpoint.tablet {
     justify-content: flex-end;
   }
-}
-
-.navigation {
-  margin-top: 20px;
-  background: linear-gradient(180deg, transparent 60%, #fff 60%);
 }

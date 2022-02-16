@@ -1,10 +1,9 @@
 @use "../base/color" as *;
+@use "../base/spacing";
 
 @use "../utilities/background" as bg;
 @use "../utilities/breakpoint";
 
-@use "../vendors/bootstrap/navbar";
-@use "../vendors/bootstrap/search";
 @use "../vendors/bootstrap/carousel";
 @use "../vendors/swiper/navigation";
 
@@ -13,18 +12,19 @@
 @use "../components/news-card";
 @use "../components/more-link";
 
-$unify-horizontall-padding-s: 20px;
-$unify-horizontall-padding-ml: 40px;
-
 main {
   @include bg.section_bg;
 }
 
+.navigation {
+  background: linear-gradient(180deg, transparent 60%, #fff 60%);
+}
+
 .service {
-  padding: 0 $unify-horizontall-padding-s;
+  padding: 0 spacing.$horizontal-padding-s;
 
   @include breakpoint.desktop {
-    padding: 0 $unify-horizontall-padding-ml;
+    padding: 0 spacing.$horizontal-padding-ml;
 
     position: relative;
     z-index: 999;
@@ -39,11 +39,11 @@ main {
   }
 }
 
-.introduction_blocks {
-  padding: 20px $unify-horizontall-padding-s;
+.introduction {
+  padding: 20px spacing.$horizontal-padding-s;
 
   @include breakpoint.desktop {
-    padding: 20px $unify-horizontall-padding-ml;
+    padding: 20px spacing.$horizontal-padding-ml;
   }
 
   .row {
@@ -64,8 +64,8 @@ main {
     }
   }
 
-  .block_title {
-    @extend %main-content-title;
+  .introduction_content_title {
+    @extend %primary-title;
     margin-bottom: 20px;
   }
 }
@@ -86,50 +86,47 @@ main {
 .news_cards_block {
   display: flex;
   flex-direction: column;
-  .news_card {
-    &:not(:first-child) {
-      margin-top: 15px;
-    }
-  }
 
   @include breakpoint.tablet {
     flex-direction: row;
-
-    .news_card {
-      &:not(:first-child) {
-        margin-top: 0px;
-      }
-    }
   }
 
   @include breakpoint.desktop {
     flex-direction: column;
+  }
 
-    .news_card {
-      &:not(:first-child) {
+  .news_card {
+    &:not(:first-child) {
+      margin-top: 15px;
+
+      @include breakpoint.tablet {
+        margin-top: 0;
+      }
+
+      @include breakpoint.desktop {
         margin-top: 15px;
       }
     }
   }
 }
 
-.work_gallery::before {
-  content: "";
-  display: block;
-  border: 1px solid $gray-200;
-
-  position: relative;
-  bottom: 20px;
-}
-
 .work_gallery {
-  padding: 20px $unify-horizontall-padding-s 20px;
+  padding: 20px spacing.$horizontal-padding-s 20px;
 
   @include breakpoint.desktop {
-    padding: 20px $unify-horizontall-padding-ml 20px;
+    padding: 20px spacing.$horizontal-padding-ml 20px;
   }
 
   .gallery_title {
-    @extend %main-content-title;
+    @extend %primary-title;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    border: 1px solid $gray-200;
+
+    position: relative;
+    bottom: 20px;
   }
 }

@@ -1,0 +1,14 @@
+@use "../base/spacing";
+
+@use "../utilities/breakpoint";
+
+@use "../vendors/bootstrap/navbar";
+@use "../vendors/bootstrap/search";
+
+.navigation {
+  margin-top: spacing.$sections-margin-s;
+
+  @include breakpoint.tablet {
+    margin-top: spacing.$sections-margin-ml;
+  }
+}

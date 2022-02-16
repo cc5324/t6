@@ -3,8 +3,15 @@
 @use "../../utilities/icon-unify" as icon;
 
 // base on swiper navigation
+.gallery_header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
 .gallery_button_group {
-  text-align: end;
+  align-self: flex-end;
 }
 
 .swiper-slide {

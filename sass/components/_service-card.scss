@@ -20,7 +20,11 @@
   }
 
   div > *:not(:first-child) {
-    margin-top: 20px;
+    margin-top: 10px;
+
+    @include breakpoint.desktop {
+      margin-top: 20px;
+    }
   }
 
   .service_title {

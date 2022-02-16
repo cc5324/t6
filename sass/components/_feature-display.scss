@@ -3,6 +3,7 @@
 
 .feature {
   display: flex;
+  align-items: center;
   padding: 10px 10px;
   border-bottom: 2px solid $gray-200;
 
@@ -15,7 +16,7 @@
       background: $highlight-green;
 
       i {
-        transform: rotate(90deg);
+        transform: tranlateY(5px);
         transition: 0.2s ease-in;
       }
     }

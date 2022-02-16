@@ -8,16 +8,16 @@
   flex-wrap: wrap;
   justify-content: center;
 
+  @include breakpoint.desktop {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
   padding: 15px 5px;
   background: black;
   color: $gray-400;
 
   text-transform: uppercase;
-
-  @include breakpoint.desktop {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-  }
 
   .copyright {
     align-self: center;
