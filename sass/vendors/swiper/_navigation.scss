@@ -29,7 +29,7 @@
     .work_link {
       display: block;
       @include icon.icon-circle-bg(45px);
-      @include position.position-absolute-center;
+      @include position.absolute-center;
     }
   }
 

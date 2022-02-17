@@ -1,5 +1,5 @@
 // 絕對定位
-@mixin position-absolute(
+@mixin absolute(
   $top: auto,
   $right: auto,
   $bottom: auto,
@@ -14,7 +14,7 @@
   z-index: $zindex;
 }
 
-@mixin position-absolute-center {
+@mixin absolute-center {
   position: absolute;
   top: 50%;
   left: 50%;

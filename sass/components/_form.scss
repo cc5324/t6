@@ -1,17 +1,20 @@
 @use "../base/color" as *;
-@use "../utilities/input-style" as input;
-@use "../utilities/button-style" as btn;
+
+@use "../components/widget-style/inputs";
+@use "../components/widget-style/buttons";
 
 .contact {
   input,
   textarea {
+    @extend .input-base;
+
     margin-bottom: 5px;
     width: 100%;
-    @include input.input-base;
   }
 
   button {
-    @include btn.button-base;
+    @extend .button_base;
+    text-transform: uppercase;
   }
 
   .reset_button {

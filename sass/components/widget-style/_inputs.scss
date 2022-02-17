@@ -1,6 +1,6 @@
-@use "../base/color" as *;
+@use "../../base/color" as *;
 
-@mixin input-base {
+.input-base {
   padding: 5px;
 
   background: $gray-100;

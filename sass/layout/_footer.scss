@@ -46,5 +46,5 @@ footer {
 
 .footer_content_title {
   margin-bottom: 20px;
-  @extend %secondary-title;
+  @extend .secondary_title;
 }
