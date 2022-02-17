@@ -4,22 +4,14 @@
 
 // base on bootstrap navbar component
 
-.navigation {
-  display: flex;
+.modify_navbar {
+  padding: 10px 10px;
 
-  .modify_navbar {
-    flex: 1 0 70%;
-    padding: 10px 10px;
+  background: white;
+  border-bottom: 1px solid $gray-200;
+  box-shadow: 0 0 10px $gray-500;
 
-    background: white;
-    border-bottom: 1px solid $gray-200;
-    box-shadow: 0 0 10px $gray-500;
-
-    .nav-link {
-      flex: 1 0 auto;
-      padding: 15px 15px;
-    }
-
+  .navbar-nav {
     .nav-link,
     .dropdown-item {
       flex: 1 0 auto;
@@ -39,7 +31,12 @@
         background: $highlight-green;
       }
     }
+
+    .nav-link {
+      padding: 15px 15px;
+    }
   }
+
   .dropdown-menu {
     padding: 0;
   }
@@ -50,11 +47,8 @@
 }
 
 @include breakpoint.tablet {
-  .navigation {
-    flex-wrap: wrap;
-    .navbar {
-      padding: 0 0;
-    }
+  .navbar {
+    padding: 0 0;
   }
 
   .nav-item {

@@ -1,23 +1,16 @@
 @use "../base/color" as *;
 
-@mixin icon-circle-bg(
-  $diameter,
-  $bg: $gray-300,
-  $hover-bg: $highlight-green,
-  $color: white,
-  $hover-color: white
-) {
+@mixin icon-circle-bg($diameter) {
   height: $diameter;
   width: $diameter;
   border-radius: 999px;
-  background: $bg;
-  color: $color;
+  background: $gray-300;
+  color: white;
 
   text-align: center;
   line-height: $diameter;
 
   &:hover {
-    background: $hover-bg;
-    color: $hover-color;
+    background: $highlight-green;
   }
 }
